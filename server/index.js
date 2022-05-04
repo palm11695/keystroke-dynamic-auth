@@ -89,8 +89,8 @@ app.post("/login", (req, res) => {
                 const margin = allAvgSpeed * 0.2;
 
                 verifiedAvgSpeed.sort();
-                const fastestWithMargin = verifiedAvgSpeed[0] - margin;
-                const slowestWithMargin = verifiedAvgSpeed[2] + margin;
+                const fastestWithMargin = verifiedAvgSpeed[0] + margin;
+                const slowestWithMargin = verifiedAvgSpeed[2] - margin;
                 const matchSpeed = slowestWithMargin <= avgSpeed && fastestWithMargin >= avgSpeed
                 
                 matchSpeed 
